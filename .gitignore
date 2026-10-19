@@ -6,8 +6,10 @@
 
 # Environment variables & secrets (STRICT - DO NOT LEAK)
 .env
+.env*
 .env*.local
 .env.local
+.env.example
 .env.development.local
 .env.test.local
 .env.production.local
