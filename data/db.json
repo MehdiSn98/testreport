@@ -1,0 +1,353 @@
+{
+  "roles": [
+    {
+      "id": 1,
+      "name": "ADMIN",
+      "title": "مدیر سیستم",
+      "description": "دسترسی کامل مدیریتی و مشاهده کلیه پروژه‌ها و دانلود خروجی گزارش‌ها",
+      "createdAt": "2026-01-01T08:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "DEVELOPER",
+      "title": "توسعه‌دهنده",
+      "description": "توسعه‌دهنده سیستم و مسئول به‌روزرسانی درصد پیشرفت پروژه‌های اختصاص‌یافته",
+      "createdAt": "2026-01-01T08:00:00.000Z"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "مهندس محمدی (مدیر سیستم)",
+      "email": "admin@company.com",
+      "passwordHash": "$2a$10$fQJ.7H7.p0vPzJbBvJqEseU247lC7aK/vjA7Yq08Oa.gD.1qFkUq.",
+      "role": "ADMIN",
+      "ssoId": "SSO-ADM-001",
+      "department": "تیم توسعه نرم‌افزار پالایشگاه",
+      "avatar": "admin",
+      "createdAt": "2026-01-01T08:00:00.000Z",
+      "updatedAt": "2026-01-01T08:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "سارا رضایی (فرانت‌اند)",
+      "email": "sara@company.com",
+      "passwordHash": "$2a$10$fQJ.7H7.p0vPzJbBvJqEseU247lC7aK/vjA7Yq08Oa.gD.1qFkUq.",
+      "role": "DEVELOPER",
+      "ssoId": "SSO-DEV-101",
+      "department": "تیم توسعه نرم‌افزار پالایشگاه",
+      "avatar": "dev1",
+      "createdAt": "2026-01-15T09:30:00.000Z",
+      "updatedAt": "2026-01-15T09:30:00.000Z"
+    },
+    {
+      "id": 3,
+      "name": "علی اکبری (بک‌اند)",
+      "email": "ali@company.com",
+      "passwordHash": "$2a$10$fQJ.7H7.p0vPzJbBvJqEseU247lC7aK/vjA7Yq08Oa.gD.1qFkUq.",
+      "role": "DEVELOPER",
+      "ssoId": "SSO-DEV-102",
+      "department": "تیم داده و زیرساخت پالایشگاه",
+      "avatar": "dev2",
+      "createdAt": "2026-01-20T10:00:00.000Z",
+      "updatedAt": "2026-01-20T10:00:00.000Z"
+    }
+  ],
+  "userRoles": [
+    {
+      "id": 1,
+      "userId": 1,
+      "roleId": 1,
+      "assignedAt": "2026-01-01T08:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "roleId": 2,
+      "assignedAt": "2026-01-15T09:30:00.000Z"
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "roleId": 2,
+      "assignedAt": "2026-01-20T10:00:00.000Z"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "یکپارچه‌سازی داده‌های پالایشگاه",
+      "description": "پایپ‌لاین تجمیع داده‌های عملیاتی و لاگ‌های پالایشی",
+      "status": "IN_PROGRESS",
+      "progress": 72,
+      "startDate": "2026-09-10",
+      "endDate": "2026-11-04",
+      "deliveredDate": null,
+      "createdAt": "2026-09-10T08:00:00.000Z",
+      "updatedAt": "2026-10-18T14:20:00.000Z"
+    },
+    {
+      "id": 2,
+      "title": "سیستم مدیریت تعمیرات",
+      "description": "سیستم جامع مدیریت و نگهداری تجهیزات و ماشین‌آلات",
+      "status": "IN_PROGRESS",
+      "progress": 45,
+      "startDate": "2026-09-15",
+      "endDate": "2026-12-09",
+      "deliveredDate": null,
+      "createdAt": "2026-09-15T09:00:00.000Z",
+      "updatedAt": "2026-10-18T16:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "title": "سامانه اسناد مهندسی",
+      "description": "آرشیو الکترونیک نقشه‌ها، مدارک فنی و استانداردهای مهندسی",
+      "status": "IN_PROGRESS",
+      "progress": 88,
+      "startDate": "2026-08-20",
+      "endDate": "2026-10-24",
+      "deliveredDate": null,
+      "createdAt": "2026-08-20T10:00:00.000Z",
+      "updatedAt": "2026-10-19T07:45:00.000Z"
+    },
+    {
+      "id": 4,
+      "title": "سامانه ثبت اموال IT",
+      "description": "ردیابی و پلاک‌کوبی تجهیزات شبکه و سیستم‌های اداری",
+      "status": "COMPLETED",
+      "progress": 100,
+      "startDate": "2026-08-01",
+      "endDate": "2026-10-11",
+      "deliveredDate": "2026-10-11",
+      "createdAt": "2026-08-01T11:00:00.000Z",
+      "updatedAt": "2026-10-11T17:30:00.000Z"
+    },
+    {
+      "id": 5,
+      "title": "آماده‌سازی محیط کاری توسعه‌دهندگان",
+      "description": "پیکربندی سرورهای تست، گیت و کانتینرهای توسعه",
+      "status": "COMPLETED",
+      "progress": 100,
+      "startDate": "2026-07-15",
+      "endDate": "2026-09-29",
+      "deliveredDate": "2026-09-29",
+      "createdAt": "2026-07-15T12:00:00.000Z",
+      "updatedAt": "2026-09-29T10:15:00.000Z"
+    },
+    {
+      "id": 6,
+      "title": "ماژول گزارش‌گیری CMIS",
+      "description": "سامانه گزارش‌دهی مدیریت قراردادها و صورت‌وضعیت‌ها",
+      "status": "PLANNED",
+      "progress": 0,
+      "startDate": "2026-11-15",
+      "endDate": "2026-12-30",
+      "deliveredDate": null,
+      "createdAt": "2026-10-19T08:00:00.000Z",
+      "updatedAt": "2026-10-19T08:00:00.000Z"
+    },
+    {
+      "id": 7,
+      "title": "داشبورد عملیات پالایشگاه",
+      "description": "مانیتورینگ لحظه‌ای شاخص‌های تولید و مصرف انرژی",
+      "status": "PLANNED",
+      "progress": 0,
+      "startDate": "2026-12-01",
+      "endDate": "2027-01-20",
+      "deliveredDate": null,
+      "createdAt": "2026-10-19T08:00:00.000Z",
+      "updatedAt": "2026-10-19T08:00:00.000Z"
+    },
+    {
+      "id": 8,
+      "title": "سامانه پایش خودکار پشتیبان‌گیری",
+      "description": "نظارت مستمر بر صحت نسخه‌های پشتیبان دیتابیس‌ها",
+      "status": "PLANNED",
+      "progress": 0,
+      "startDate": "2026-12-15",
+      "endDate": "2027-02-10",
+      "deliveredDate": null,
+      "createdAt": "2026-10-19T08:00:00.000Z",
+      "updatedAt": "2026-10-19T08:00:00.000Z"
+    },
+    {
+      "id": 9,
+      "title": "سیستم جامع مدیریت آزمایشگاه نفت",
+      "description": "ثبت نتایج آزمون‌های کیفی و تحلیل نمونه‌های پالایشی",
+      "status": "IN_PROGRESS",
+      "progress": 75,
+      "startDate": "2026-09-20",
+      "endDate": "2026-11-20",
+      "deliveredDate": null,
+      "createdAt": "2026-09-20T08:00:00.000Z",
+      "updatedAt": "2026-10-19T08:21:21.543Z"
+    },
+    {
+      "id": 10,
+      "title": "سامانه مانیتورینگ خطوط انتقال گاز",
+      "description": "سنجش لحظه‌ای فشار، دما و دبی خطوط لوله خوراک",
+      "status": "IN_PROGRESS",
+      "progress": 30,
+      "startDate": "2026-10-01",
+      "endDate": "2026-12-15",
+      "deliveredDate": null,
+      "createdAt": "2026-10-01T08:00:00.000Z",
+      "updatedAt": "2026-10-19T09:00:00.000Z"
+    },
+    {
+      "id": 11,
+      "title": "پرتال کنترل کیفیت و بازرسی فنی",
+      "description": "مدیریت فرم‌ها، گزارش‌های بازرسی ادواری و استانداردها",
+      "status": "COMPLETED",
+      "progress": 100,
+      "startDate": "2026-07-01",
+      "endDate": "2026-09-15",
+      "deliveredDate": "2026-09-15",
+      "createdAt": "2026-07-01T08:00:00.000Z",
+      "updatedAt": "2026-09-15T16:00:00.000Z"
+    },
+    {
+      "id": 12,
+      "title": "سامانه رزرو سالن جلسات و مهمانسرا",
+      "description": "مدیریت هوشمند امکانات رفاهی و اقامتی مجتمع پالایشگاه",
+      "status": "COMPLETED",
+      "progress": 100,
+      "startDate": "2026-06-15",
+      "endDate": "2026-08-30",
+      "deliveredDate": "2026-08-30",
+      "createdAt": "2026-06-15T08:00:00.000Z",
+      "updatedAt": "2026-08-30T14:00:00.000Z"
+    },
+    {
+      "id": 13,
+      "title": "یکپارچه‌سازی سامانه پیامکی هشدار حوادث HSE",
+      "description": "ارسال خودکار هشدارهای ایمنی و تخلیه اضطراری به کارکنان",
+      "status": "PLANNED",
+      "progress": 0,
+      "startDate": "2027-01-10",
+      "endDate": "2027-03-05",
+      "deliveredDate": null,
+      "createdAt": "2026-10-19T09:00:00.000Z",
+      "updatedAt": "2026-10-19T09:00:00.000Z"
+    },
+    {
+      "id": 14,
+      "title": "سامانه هوشمند مدیریت تردد خودروهای سوخت‌رسان",
+      "description": "پلاک‌خوان هوشمند و اتصال به سامانه توزین الکترونیکی",
+      "status": "PLANNED",
+      "progress": 0,
+      "startDate": "2027-02-01",
+      "endDate": "2027-04-15",
+      "deliveredDate": null,
+      "createdAt": "2026-10-19T09:00:00.000Z",
+      "updatedAt": "2026-10-19T09:00:00.000Z"
+    }
+  ],
+  "userProjects": [
+    {
+      "id": 1,
+      "userId": 2,
+      "projectId": 1,
+      "roleInProject": "Lead Frontend",
+      "assignedAt": "2026-09-10T08:00:00Z"
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "projectId": 1,
+      "roleInProject": "Backend Engineer",
+      "assignedAt": "2026-09-10T08:00:00Z"
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "projectId": 2,
+      "roleInProject": "Frontend Developer",
+      "assignedAt": "2026-09-15T09:00:00Z"
+    },
+    {
+      "id": 4,
+      "userId": 3,
+      "projectId": 3,
+      "roleInProject": "Fullstack Engineer",
+      "assignedAt": "2026-08-20T10:00:00Z"
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "projectId": 4,
+      "roleInProject": "Developer",
+      "assignedAt": "2026-08-01T11:00:00Z"
+    },
+    {
+      "id": 6,
+      "userId": 3,
+      "projectId": 5,
+      "roleInProject": "DevOps & Backend",
+      "assignedAt": "2026-07-15T12:00:00Z"
+    },
+    {
+      "id": 7,
+      "userId": 2,
+      "projectId": 6,
+      "roleInProject": "Assigned Developer",
+      "assignedAt": "2026-10-19T08:00:00Z"
+    },
+    {
+      "id": 8,
+      "userId": 3,
+      "projectId": 7,
+      "roleInProject": "Assigned Developer",
+      "assignedAt": "2026-10-19T08:00:00Z"
+    },
+    {
+      "id": 9,
+      "userId": 3,
+      "projectId": 8,
+      "roleInProject": "Assigned Developer",
+      "assignedAt": "2026-10-19T08:00:00Z"
+    },
+    {
+      "id": 10,
+      "userId": 2,
+      "projectId": 9,
+      "roleInProject": "Frontend Developer",
+      "assignedAt": "2026-09-20T08:00:00Z"
+    },
+    {
+      "id": 11,
+      "userId": 3,
+      "projectId": 10,
+      "roleInProject": "Backend Engineer",
+      "assignedAt": "2026-10-01T08:00:00Z"
+    },
+    {
+      "id": 12,
+      "userId": 2,
+      "projectId": 11,
+      "roleInProject": "Lead Developer",
+      "assignedAt": "2026-07-01T08:00:00Z"
+    },
+    {
+      "id": 13,
+      "userId": 3,
+      "projectId": 12,
+      "roleInProject": "Fullstack Developer",
+      "assignedAt": "2026-06-15T08:00:00Z"
+    },
+    {
+      "id": 14,
+      "userId": 2,
+      "projectId": 13,
+      "roleInProject": "Assigned Developer",
+      "assignedAt": "2026-10-19T09:00:00Z"
+    },
+    {
+      "id": 15,
+      "userId": 3,
+      "projectId": 14,
+      "roleInProject": "Assigned Developer",
+      "assignedAt": "2026-10-19T09:00:00Z"
+    }
+  ]
+}

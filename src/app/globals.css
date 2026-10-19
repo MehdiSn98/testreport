@@ -1,0 +1,295 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-main: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-card-subtle: #f1f5f9;
+    --border-subtle: #e2e8f0;
+    --text-primary: #020617;
+    --text-secondary: #1e293b;
+    --text-muted: #334155;
+    --accent-cyan: #0891b2;
+    --accent-magenta: #c026d3;
+  }
+
+  .dark {
+    --bg-main: #070d1e;
+    --bg-card: #0d172e;
+    --bg-card-subtle: #132040;
+    --border-subtle: #1e2f57;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #64748b;
+    --accent-cyan: #06b6d4;
+    --accent-magenta: #d946ef;
+  }
+}
+
+/* ========================================================
+   Custom Font: Yekan (یکان)
+   ======================================================== */
+@font-face {
+  font-family: 'Yekan';
+  src: url('/fonts/Yekan.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Global Font Scaling: slightly larger overall for superior Persian typography */
+html {
+  font-size: 17.2px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Yekan', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Tahoma, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  min-height: 100vh;
+  direction: rtl;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  line-height: 1.55;
+}
+
+/* Upscale microscopic font utility classes for crisp Persian legibility */
+.text-\[10px\] {
+  font-size: 11.5px !important;
+}
+.text-\[11px\] {
+  font-size: 12.5px !important;
+}
+
+/* ========================================================
+   Light Mode: High-Contrast Darker Typography
+   ======================================================== */
+html:not(.dark) body {
+  color: #0f172a;
+}
+
+html:not(.dark) .text-slate-400 {
+  color: #334155 !important;
+}
+
+html:not(.dark) .text-slate-500 {
+  color: #1e293b !important;
+}
+
+html:not(.dark) .text-slate-600 {
+  color: #0f172a !important;
+}
+
+html:not(.dark) .text-slate-700 {
+  color: #020617 !important;
+}
+
+html:not(.dark) .text-slate-800 {
+  color: #020617 !important;
+}
+
+html:not(.dark) .text-slate-900 {
+  color: #000000 !important;
+}
+
+html:not(.dark) .text-gray-400 {
+  color: #334155 !important;
+}
+
+html:not(.dark) .text-gray-500 {
+  color: #1e293b !important;
+}
+
+html:not(.dark) .text-gray-600 {
+  color: #0f172a !important;
+}
+
+html:not(.dark) .text-gray-700 {
+  color: #020617 !important;
+}
+
+html:not(.dark) .text-emerald-500 {
+  color: #047857 !important;
+}
+
+html:not(.dark) .text-fuchsia-500 {
+  color: #a21caf !important;
+}
+
+html:not(.dark) input::placeholder,
+html:not(.dark) textarea::placeholder {
+  color: #64748b !important;
+}
+
+/* Ensure Yekan font applies to all form inputs, buttons, and text elements */
+*,
+*::before,
+*::after,
+input,
+button,
+select,
+textarea {
+  font-family: 'Yekan', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Tahoma, sans-serif;
+}
+
+/* Ensure cursor-pointer on all clickable and interactive elements */
+button,
+[role='button'],
+a,
+select,
+summary,
+input[type='checkbox'],
+input[type='radio'],
+input[type='submit'],
+input[type='button'],
+label[for],
+.btn-interactive {
+  cursor: pointer;
+}
+
+button:disabled,
+[role='button']:disabled,
+input:disabled {
+  cursor: not-allowed !important;
+}
+
+/* Custom Gradients */
+.gradient-brand {
+  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #d946ef 100%);
+}
+
+.gradient-brand-text {
+  background: linear-gradient(135deg, #06b6d4 0%, #60a5fa 40%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Range Slider */
+input[type='range'].custom-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 9px;
+  border-radius: 9999px;
+  outline: none;
+  cursor: pointer;
+  background: #e2e8f0;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark input[type='range'].custom-slider {
+  background: #1e293b;
+}
+
+/* Polished Interactive Animations */
+@keyframes modalPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes fadeInSoft {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-modal-pop {
+  animation: modalPop 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes dropdownPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-dropdown-pop {
+  animation: dropdownPop 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform-origin: top left;
+}
+
+.animate-fade-in-soft {
+  animation: fadeInSoft 0.25s ease-out forwards;
+}
+
+.btn-interactive {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-interactive:hover {
+  transform: translateY(-1.5px);
+}
+.btn-interactive:active {
+  transform: translateY(0.5px) scale(0.98);
+}
+
+/* Webkit (Chrome, Safari, Edge) */
+input[type='range'].custom-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #06b6d4;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.5), 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: grab;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input[type='range'].custom-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  border-color: #d946ef;
+  box-shadow: 0 0 14px rgba(217, 70, 239, 0.6);
+}
+
+input[type='range'].custom-slider:active::-webkit-slider-thumb {
+  cursor: grabbing;
+  transform: scale(1.2);
+  border-color: #ec4899;
+}
+
+/* Firefox */
+input[type='range'].custom-slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #06b6d4;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+  cursor: grab;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 3px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
